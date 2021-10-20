@@ -245,9 +245,9 @@ window.qBittorrent.PropGeneral = (function() {
                         let newColor = '';
 
                         if (status === 1)
-                            newColor = 'green';
+                            newColor = '#44ffbe';
                         else if (status === 2)
-                            newColor = 'blue';
+                            newColor = '#8b1eff';
 
                         if (newColor === color) {
                             ++rectWidth;

@@ -8,6 +8,22 @@ a img,
     border: none;
 }
 
+@font-face {
+    font-family: "VictorMono-Bold";
+    src: url("../fonts/VictorMonoNF-Bold.ttf");
+}
+
+@font-face {
+  font-family: "VictorMono-SB";
+  src: url("../fonts/VictorMonoNF-Semi-Bold.ttf");
+}
+
+@font-face {
+  font-family: "VictorMono";
+  src: url("../fonts/VictorMonoNF-Regular.ttf");
+}
+
+
 /*table { border-collapse: collapse; border-spacing: 0; }*/
 
 :focus {
@@ -17,10 +33,11 @@ a img,
 /* Structure */
 
 body {
-    color: #555;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 18px;
+    
+    color: #e0e0e0;
+    font-family: VictorMono;
+    font-size: 10pt;
+    line-height: 14pt;
     margin: 0;
     text-align: left;
 }
@@ -38,7 +55,7 @@ body {
 h2,
 h3,
 h4 {
-    color: #333;
+    color: #cdcdcd;
     font-size: 12px;
     font-weight: bold;
     margin: 0;
@@ -46,13 +63,13 @@ h4 {
 }
 
 h2 {
-    color: #555;
+    color: #e0e0e0;
     font-size: 14px;
     font-weight: bold;
 }
 
 #mochaPage h3 {
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #FF2975;
     display: block;
     font-size: 12px;
     margin: 0 0 8px 0;
@@ -60,7 +77,7 @@ h2 {
 }
 
 #error_div {
-    color: #f00;
+    color: #FF2975;
     float: left;
     font-size: 14px;
     font-weight: bold;
@@ -70,8 +87,32 @@ h4 {
     font-size: 11px;
 }
 
+/* width */
+::-webkit-scrollbar {
+	background: #171717;
+    width: 6pt;
+    height: 6pt;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #333; 
+    border-radius: 2pt;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 2pt;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #8b1eff 0%, #ff8f1f 50%, #44ffbe 100%); 
+}
+
 a {
-    color: #e60;
+    color: #44ffbe;
     cursor: pointer;
     text-decoration: none;
 }
@@ -103,11 +144,11 @@ dd {
 /* Code */
 
 pre {
-    background-color: #f6f6f6;
-    border: 1px solid #d1d7dc;
-    color: #006600;
+    background-color: #00f6f6;
+    border: 1px solid #d1d700;
+    color: #44ffbe;
     display: block;
-    font-family: "Courier New", Courier, monospace;
+    font-family: VictorMono-SB;
     font-size: 11px;
     margin: 0 0 10px 0;
     max-height: 250px;
@@ -118,10 +159,21 @@ pre {
 /* Dividers */
 
 hr {
-    background-color: #ddd;
+    background: rgb(139,30,255);
+    background: linear-gradient(135deg, #8b1eff 0%, #ff8f1f 50%, #44ffbe 100%);
     border: 0px;
-    color: #ccc;
+    color: #44ffbe;
     height: 1px;
+}
+
+.icon {
+    padding-top: 5px;
+    margin-top: 5px;
+    font-size: 14pt;
+}
+
+.dent {
+    margin-left: 5pt;
 }
 
 .vcenter {
@@ -140,10 +192,11 @@ hr {
 
 #Filters ul {
     list-style-type: none;
+    margin-left: 13pt;
 }
 
 #Filters ul li {
-    margin-left: -16px;
+    margin-left: -11pt;
 }
 
 #Filters ul img {
@@ -154,20 +207,22 @@ hr {
 }
 
 .selectedFilter {
-    background-color: #415a8d;
-    color: #ffffff;
+    background: #8b1eff;
+    background: linear-gradient(135deg, #8b1eff 0%, #ff8f1f 50%, #44ffbe 100%);
+    color: #171717;
 }
 
 .selectedFilter a {
-    color: #ffffff;
+    color: #171717;
+    font-weight: 900;
 }
 
 #properties {
-    background-color: #e5e5e5;
+    background-color: #171717;
 }
 
 a.propButton {
-    border: 1px solid rgb(85, 81, 91);
+    border: 1px solid rgb(85, 00, 91);
     margin-left: 3px;
     margin-right: 3px;
     /*border-radius: 3px;*/
@@ -186,15 +241,15 @@ a.propButton img {
 /* context menu specific */
 
 .contextMenu {
-    background: #eee;
-    border: 1px solid #999;
+    background: #333;
+    border: 1px solid #171717;
     display: none;
     list-style-type: none;
     padding: 0;
 }
 
 .contextMenu .separator {
-    border-top: 1px solid #999;
+    border-top: 1px solid #171717;
 }
 
 .contextMenu li {
@@ -203,9 +258,9 @@ a.propButton img {
 }
 
 .contextMenu li a {
-    color: #000;
+    color: #cdcdcd;
     display: block;
-    font-family: tahoma, arial, sans-serif;
+    font-family: VictorMono;
     font-size: 12px;
     padding: 5px 20px 5px 5px;
     text-decoration: none;
@@ -213,21 +268,21 @@ a.propButton img {
 }
 
 .contextMenu li a:hover {
-    background-color: #ddd;
+    background-color: #171717;
 }
 
 .contextMenu li a.disabled {
-    color: #ccc;
+    color: #FF2975;
     font-style: italic;
 }
 
 .contextMenu li a.disabled:hover {
-    background-color: #eee;
+    background-color: #333;
 }
 
 .contextMenu li ul {
-    background: #eee;
-    border: 1px solid #999;
+    background: #333;
+    border: 1px solid #171717;
     left: -999em;
     list-style-type: none;
     margin: -29px 0 0 100%;
@@ -290,7 +345,7 @@ a.propButton img {
 }
 
 .sliderarea {
-    background: #f2f2f2 url(../images/slider-area.gif) repeat-x;
+    background: #00f200 url(../images/slider-area.webp) repeat-x;
     border: 1px solid #a3a3a3;
     border-bottom: 1px solid #ccc;
     border-left: 1px solid #ccc;
@@ -331,14 +386,14 @@ a.propButton img {
 /* Mocha Customization */
 
 #mochaToolbar {
-    height: 29px;
+    height: 35px;
     margin-top: 5px;
     overflow-y: hidden;
     position: relative;
 }
 
 #mochaToolbar .divider {
-    background-image: url(../images/toolbox-divider.gif);
+/*    background-image: url(../images/toolbox-divider.gif); */
     background-position: left center;
     background-repeat: no-repeat;
     padding-left: 14px;
@@ -372,7 +427,7 @@ a.propButton img {
 
 #torrentFilesFilterToolbar {
     float: right;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
 #torrentFilesFilterInput {
@@ -406,7 +461,10 @@ label.partial {
 }
 
 fieldset.settings {
-    border: solid 1px black;
+    -moz-border-image: -moz-linear-gradient(135deg, #8b1eff 0%, #ff8f1f 50%, #44ffbe 100%);
+    -webkit-border-image: -webkit-linear-gradient(135deg, #8b1eff 0%, #ff8f1f 50%, #44ffbe 100%);
+    border-image: linear-gradient(135deg, #8b1eff 0%, #ff8f1f 50%, #44ffbe 100%);
+    border-image-slice: 1;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
@@ -434,20 +492,24 @@ div.formRow {
 
 .filterTitle {
     display: block;
+    font-size: 14pt;
     font-weight: bold;
     overflow: hidden;
     padding-left: 5px;
     padding-top: 5px;
+    padding-bottom: 1px;
     text-overflow: ellipsis;
     text-transform: uppercase;
     white-space: nowrap;
+    border-bottom: #333 2px inset;
+    margin-bottom: 4pt;
 }
 
 .filterTitle img {
-    height: 16px;
+    height: 14pt;
     margin-bottom: -3px;
     padding: 0 5px;
-    width: 16px;
+    width: 14pt;
 }
 
 .filterTitle img.rotate {
@@ -461,6 +523,7 @@ ul.filterList {
 
 ul.filterList a {
     color: inherit;
+    font-size: 12pt;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -468,11 +531,37 @@ ul.filterList a {
 }
 
 ul.filterList li:hover {
-    background-color: #e60;
+    background-color: #8b1eff;
 }
 
 ul.filterList li:hover a {
-    color: white;
+    color: #e0e0e0;
+}
+
+details > summary {
+    margin-left: -5pt;
+    font-size: 12pt;
+    cursor: pointer;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+    display: none;
+    content: "";
+}
+
+summary:after {
+    float: left;
+    content: "\fa21";
+    margin-right: 13.5pt;
+    color: #FF2975;
+    font-size: 18pt;
+}
+
+details[open] summary:after {
+    content: "\fa20";
+    color: #44ffbe;
+    font-size: 18pt;
 }
 
 td.generalLabel {
@@ -489,6 +578,35 @@ td.generalLabel {
 #torrentTrackersTableDiv,
 #webseedsTable {
     line-height: 25px;
+}
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    writing-mode: horizontal-tb;
+    text-rendering: auto;
+    color: #171717;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color:#e0e0e0;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color:#333;
+    border-image: initial;
+}
+
+input[type="button" i] {
+    cursor: pointer;
 }
 
 .filesTableCollapseIcon {
@@ -518,7 +636,7 @@ td.generalLabel {
 }
 
 #progress {
-    border: 1px solid #999;
+    border: 1px inset #333;
     padding: 0;
     position: relative;
     width: 100%;
@@ -538,13 +656,13 @@ td.generalLabel {
 
 #watched_folders_tab td,
 #watched_folders_tab th {
-    border: 1px solid black;
+    border: 1px solid #333;
     padding: 2px 4px;
 }
 
 .select-watched-folder-editable {
-    background-color: white;
-    border: solid grey 1px;
+    background-color: #333;
+    border: solid #cdcdcd 1px;
     height: 20px;
     position: relative;
     width: 160px;
@@ -634,11 +752,11 @@ td.statusBarSeparator {
 }
 
 .red {
-    color: red;
+    color: #FF2975;
 }
 
 .green {
-    color: green;
+    color: #44ffbe;
 }
 
 .searchPluginsTableRow {
@@ -646,15 +764,15 @@ td.statusBarSeparator {
 }
 
 #torrentFilesTableDiv .dynamicTable tr.nonAlt {
-    background-color: #fff;
+    background-color: #171717;
 }
 
 #torrentFilesTableDiv .dynamicTable tr.nonAlt.selected {
-    background-color: #354158;
-    color: #fff;
+    background-color: #333;
+    color: #e0e0e0;
 }
 
 #torrentFilesTableDiv .dynamicTable tr.nonAlt:hover {
-    background-color: #ee6600;
-    color: #fff;
+    background-color: #ff8f1f;
+    color: #171717;
 }

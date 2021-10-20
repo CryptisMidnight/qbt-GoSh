@@ -20,11 +20,32 @@ Required by:
 
 html,
 body {
-    background: #fff;
+    background: #333;
 }
 
 body {
     margin: 0; /* Required */
+}
+
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: threedface;
+    -moz-border-image: -moz-linear-gradient(135deg, rgba(139,30,255,1) 0%, rgba(255,143,31,1) 50%, rgba(68,255,190,1) 100%);
+    -webkit-border-image: -webkit-linear-gradient(135deg, rgba(139,30,255,1) 0%, rgba(255,143,31,1) 50%, rgba(68,255,190,1) 100%);
+    border-image: linear-gradient(135deg, rgba(139,30,255,1) 0%, rgba(255,143,31,1) 50%, rgba(68,255,190,1) 100%);
+    border-image-slice: 1;
+    -webkit-border-radius: 5pt;
+    -moz-border-radius: 5pt;
+    border-radius: 5pt;
 }
 
 #desktop {
@@ -37,7 +58,7 @@ body {
 }
 
 #desktopHeader {
-    background: #f2f2f2;
+    background: #171717;
 }
 
 #desktopTitlebarWrapper {
@@ -55,7 +76,7 @@ body {
 }
 
 #desktopTitlebar h1.applicationTitle {
-    color: #fff;
+    color: rgb(255, 0, 179);
     display: none;
     font-size: 20px;
     font-weight: bold;
@@ -75,12 +96,12 @@ body {
 }
 
 #desktopTitlebar h2.tagline .taglineEm {
-    color: #fff;
+    color: rgb(0, 255, 55);
     font-weight: bold;
 }
 
 #topNav {
-    color: #d4dce4;
+    color: #d4dc00;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 10px;
     padding: 13px 10px 0 0;
@@ -91,7 +112,7 @@ body {
 }
 
 #topNav a {
-    color: #fff;
+    color: #f0f;
     font-weight: normal;
 }
 
@@ -102,9 +123,9 @@ body {
 /* Navbar */
 
 #desktopNavbar {
-    background: #f2f2f2;
+    background: #333;
     /*background-color: #ccc;*/
-    border-bottom: 1px solid #3f3f3f;
+    border-bottom: 1px solid #cdcdcd;
     height: 20px;
     margin: 0 0px;
     overflow: hidden; /* Remove this line if you want the menu to be backward compatible with Firefox 2 */
@@ -126,14 +147,15 @@ body {
 }
 
 #desktopNavbar ul li a {
-    color: #333;
+    color: #cdcdcd;
     font-weight: normal;
     padding: 2px 10px 6px 10px;
 }
 
 #desktopNavbar ul li a:hover {
-    background-color: #fff;
-    color: #333;
+    background-color: #ff8f1f;
+    color: #171717;
+    font-weight: bold;
 }
 
 #desktopNavbar ul li a.arrow-right,
@@ -144,8 +166,8 @@ body {
 }
 
 #desktopNavbar li ul {
-    background: #fff url(../images/bg-dropdown.gif) repeat-y;
-    border: 1px solid #3f3f3f;
+    background: #333 url(../images/bg-dropdown.webp) repeat-y;
+    border: 1px inset #171717;
     left: -999em;
     margin-top: -6px;
     position: absolute;
@@ -177,7 +199,7 @@ body {
 }
 
 #desktopNavbar li ul li a {
-    color: #3f3f3f;
+    color: #e0e0e0;
     font-weight: normal;
     min-width: 120px;
     padding: 1px 10px 1px 20px;
@@ -185,9 +207,10 @@ body {
 }
 
 #desktopNavbar li ul li a:hover {
-    background: #6c98d9;
+    background: #171717;
+    border-radius: 2px;
     -moz-border-radius: 2px;
-    color: #fff;
+    color: #8b1eff;
 }
 
 #desktopNavbar li ul li a:hover .check {
@@ -210,14 +233,14 @@ body {
 }
 
 li.divider {
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid #cdcdcd;
     margin-top: 2px;
     padding-top: 3px;
 }
 
 #pageWrapper {
-    border-bottom: 1px solid #909090;
-    border-top: 1px solid #909090;
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
     overflow: hidden; /* This can be set to hidden or auto */
     position: relative;
     /*height: 100%;*/
@@ -235,8 +258,8 @@ li.divider {
 }
 
 #desktopFooter {
-    background: #f2f2f2;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    background: #333;
+    font-family: VictorMono-SB;
     font-size: 11px;
     height: 24px;
     padding: 6px 8px 0 8px;
@@ -256,8 +279,8 @@ li.divider {
 /* Panels */
 
 .panel {
-    background: #f8f8f8;
-    border-bottom: 1px solid #b9b9b9;
+    background: #171717;
+    border-bottom: 1px solid #333;
     overflow: auto;
     position: relative;
 }
@@ -267,24 +290,24 @@ li.divider {
 }
 
 .panelAlt {
-    background: #f2f2f2;
+    background: #333
 }
 
 .bottomPanel {
-    border-bottom: 0;
+    border-bottom:  1px solid #333;
 }
+
 
 .pad {
     padding: 8px;
 }
 
 #mainPanel {
-    background: #fff;
+    background: #FF2975;
 }
 
 .panel-header {
-    background: #f1f1f1 url(../images/bg-panel-header.gif) repeat-x;
-    border-bottom: 1px solid #d3d3d3;
+    background: #171717;
     height: 30px;
     overflow: hidden;
     position: relative;
@@ -295,7 +318,6 @@ li.divider {
 }
 
 .panel-headerContent.tabs {
-    background: url(../images/tabs.gif) repeat-x;
     background-position: left -68px;
 }
 
@@ -326,7 +348,7 @@ li.divider {
 /* Column and Panel Handles */
 
 .horizontalHandle {
-    background: #eee url(../images/bg-handle-horizontal.gif) repeat-x;
+    background: #171717 url(../images/bg-handle-horizontal.gif) repeat-x;
     font-size: 1px;
     height: 4px;
     line-height: 1px;
@@ -338,8 +360,7 @@ li.divider {
 }
 
 .horizontalHandle .handleIcon {
-    background: url(../images/handle-icon-horizontal.gif) center center
-        no-repeat;
+    background: #44ffbe;
     font-size: 1px;
     height: 4px;
     line-height: 1px;
@@ -348,8 +369,7 @@ li.divider {
 }
 
 .columnHandle {
-    background: #c3c3c3 url(../images/handle-icon.gif) center center no-repeat;
-    border: 1px solid #909090;
+    background: #ff8f1f;
     border-bottom: 0;
     border-top: 0;
     float: left;
@@ -399,7 +419,8 @@ div.toolbox.divider {
 }
 
 .iconWrapper:hover {
-    border: 1px solid #a0a0a0;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
     -moz-border-radius: 3px;
 }
 

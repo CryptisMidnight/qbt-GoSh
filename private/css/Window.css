@@ -19,7 +19,7 @@ Required by:
 ---------------------------------------------------------------- */
 
 .mocha {
-    background-color: #e5e5e5;
+    background-color: #171717;
     display: none;
     overflow: hidden;
 }
@@ -42,13 +42,18 @@ Required by:
 */
 
 .mochaTitlebar {
-    background: url(../images/spacer.gif?from=fafafa&to=e5e5e5);
+    background: #333;
+    color: #e0e0e0;
+    margin: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
     overflow: hidden;
     width: 100%;
 }
 
 .mochaTitlebar h3 {
-    color: #888;
+    color: #cdcdcd;
     font-size: 12px;
     font-weight: bold;
     line-height: 15px;
@@ -57,12 +62,11 @@ Required by:
 }
 
 .mocha.isFocused .mochaTitlebar h3 {
-    color: #181818;
+    color: #e0e0e0;
 }
 
 .mochaToolbarWrapper {
-    background: #f1f1f1;
-    border-top: 1px solid #d9d9d9;
+    background: #171717;
     height: 29px;
     overflow: hidden;
     position: relative;
@@ -71,22 +75,20 @@ Required by:
 
 div.mochaToolbarWrapper.bottom {
     border: 0;
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid #f00;
 }
 
 .mochaToolbar {
-    border-top: 1px solid #fff;
     width: 100%; /* For IE */
 }
 
 .mochaContentBorder {
-    border-bottom: 1px solid #dadada;
-    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #171717;
 }
 
 /* Has a fixed height and scrollbars if required. */
 .mochaContentWrapper {
-    background: #fff;
+    background: #171717;
     font-size: 12px;
     overflow: auto;
 }
@@ -96,7 +98,7 @@ div.mochaToolbarWrapper.bottom {
 }
 
 .mocha .handle {
-    background: #0f0;
+    background: #44ffbe;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE8 */
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); /* IE6 and 7*/
     font-size: 1px; /* For IE6 */
@@ -111,14 +113,14 @@ div.mochaToolbarWrapper.bottom {
 
 /* Corner resize handles */
 .mocha .corner {
-    background: #f00;
+    background: #FF2975;
     height: 10px;
     width: 10px;
 }
 
 /* Bottom right resize handle */
 .mocha .cornerSE {
-    background: #fefefe; /* This is the color of the visible resize handle */
+    background: #171717; /* This is the color of the visible resize handle */
     height: 20px;
     width: 20px;
 }
@@ -159,11 +161,21 @@ div.mochaToolbarWrapper.bottom {
 	2. Replcac the background-color with a background-image for each button.
 
 */
-.mochaMinimizeButton,
-.mochaMaximizeButton,
+.mochaMaximizeButton{
+    background-color: #01F5EA;
+    color: #171717;
+    cursor: pointer;
+    float: right;
+    font-size: 1px;
+    height: 14px;
+    margin-left: 5px;
+    width: 14px;
+    z-index: 4;
+}
+
 .mochaCloseButton {
-    background-color: #fff;
-    color: #666;
+    background-color: #FF2975;
+    color: #171717;
     cursor: pointer;
     float: right;
     font-size: 1px;
@@ -174,7 +186,15 @@ div.mochaToolbarWrapper.bottom {
 }
 
 .mochaMinimizeButton {
+    background-color: #FFD317;
+    color: #171717;
+    cursor: pointer;
+    float: right;
+    font-size: 1px;
+    height: 14px;
     margin-left: 0;
+    width: 14px;
+    z-index: 4;
 }
 
 .mochaSpinner {
@@ -208,7 +228,7 @@ div.mochaToolbarWrapper.bottom {
 ---------------------------------------------------------------- */
 
 #modalOverlay {
-    background: #000;
+    background: #171717;
     display: none;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE8 */
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); /* IE6 and 7*/
@@ -238,7 +258,7 @@ div.mochaToolbarWrapper.bottom {
 /* Underlay */
 
 #windowUnderlay {
-    background: #fff;
+    background: #333;
     left: 0;
     position: fixed;
     top: 0;
@@ -285,7 +305,7 @@ div.mochaToolbarWrapper.bottom {
 /* Modals */
 
 .modal2 {
-    border: 8px solid #fff;
+    border: 8px solid #f0f;
 }
 
 .modal2 .mochaContentBorder {
@@ -304,7 +324,7 @@ div.mochaToolbarWrapper.bottom {
 }
 
 .mocha.transparent .mochaTitlebar h3 {
-    color: #fff;
+    color: #171717;
     display: none;
 }
 

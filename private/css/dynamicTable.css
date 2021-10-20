@@ -6,12 +6,12 @@
 **************************************************************/
 
 .dynamicTable tbody tr {
-    background-color: #fff;
+    background-color: #171717;
 }
 
 .dynamicTable tbody tr:nth-child(even),
 .dynamicTable tbody tr.alt {
-    background-color: #eee;
+    background-color: #333;
 }
 
 #transferList .dynamicTable td {
@@ -19,13 +19,18 @@
 }
 
 .dynamicTable tbody tr.selected {
-    background-color: #354158;
-    color: #fff;
+    background: linear-gradient(135deg, #8b1eff 0%, #ff8f1f 50%, #44ffbe 100%);
+    color: #171717;
+    font-family: "VictorMono-Bold";
+    font-weight: 900;
+}
+
+.dynamicTable tbody tr.selected:hover {
+    color: #01f5ea;
 }
 
 .dynamicTable tbody tr:hover {
-    background-color: #ee6600;
-    color: #fff;
+    color: #ff8f1f;
 }
 
 #transferList tr:hover {
@@ -50,14 +55,14 @@ tr.dynamicTableHeader {
 }
 
 .dynamicTable th {
-    background-color: #eee;
-    border-right-color: #ccc;
+    background-color: #333;
+    border-right-color: #cdcdcd;
     border-right-style: solid;
-    border-right-width: 1px;
+    border-right-width: 3px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 4px;
+    padding: 2px 5px;
     white-space: nowrap;
 }
 
@@ -67,7 +72,7 @@ tr.dynamicTableHeader {
 }
 
 .dynamicTable thead tr {
-    background-color: #eee;
+    background-color: #333;
 }
 
 .dynamicTable th,
@@ -95,6 +100,7 @@ tr.dynamicTableHeader {
 
 .dynamicTableFixedHeaderDiv {
     overflow: hidden;
+    background: #333;
 }
 
 .dynamicTableDiv {
@@ -107,3 +113,4 @@ tr.dynamicTableHeader {
     padding-bottom: 0px !important;
     padding-top: 0px !important;
 }
+

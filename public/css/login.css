@@ -1,8 +1,24 @@
+
+
+@font-face {
+    font-family: "VictorMono-Bold";
+    src: url("../fonts/VictorMonoNF-Bold.ttf");
+}
+@font-face {
+  font-family: "VictorMono-SB";
+  src: url("../fonts/VictorMonoNF-Semi-Bold.ttf");
+}
+@font-face {
+  font-family: "VictorMono";
+  src: url("../fonts/VictorMonoNF-Regular.ttf");
+}
+
 body {
-    color: #555;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 18px;
+    background: #171717;
+    color: #e0e0e0;
+    font-family: VictorMono-SB;
+    font-size: 15px;
+    line-height: 20px;
     margin: 0;
     text-align: left;
 }
@@ -13,7 +29,46 @@ body {
 }
 
 .row {
-    margin-bottom: 5px;
+    margin: 5px 2px;
+}
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    writing-mode: horizontal-tb;
+    font-size: 15px;
+    font-family: VictorMono-SB;
+    background: #333;
+    color: #44ffbe;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0.5em;
+    padding: 5px;
+    border-width: 2px;
+    border-style: inset;
+    border-radius: 5px;
+    -moz-border-image: -moz-linear-gradient(135deg, rgba(139,30,255,1) 0%, rgba(255,143,31,1) 50%, rgba(68,255,190,1) 100%);
+    -webkit-border-image: -webkit-linear-gradient(135deg, rgba(139,30,255,1) 0%, rgba(255,143,31,1) 50%, rgba(68,255,190,1) 100%);
+    border-image: linear-gradient(135deg, rgba(139,30,255,1) 0%, rgba(255,143,31,1) 50%, rgba(68,255,190,1) 100%);
+    border-image-slice: 1;
+}
+
+input:focus {
+   
+    border-color: #8b1eff; 
+    border-radius: 2px;
+}    
+
+input[type="button" i] {
+    cursor: pointer;
 }
 
 #main {
@@ -29,7 +84,7 @@ body {
 }
 
 #error_msg {
-    color: #f00;
+    color: #FF2975;
 }
 
 #login {
@@ -37,5 +92,5 @@ body {
 }
 
 #logo img {
-    height: 11em;
+    height: 20em;
 }
