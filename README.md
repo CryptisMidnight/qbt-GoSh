@@ -1,4 +1,4 @@
-# MidUI
+# GoSh
 This is a custom dark ui with many colorful components, for the Webui of Qbittorrent
 
 ## Screenshots
